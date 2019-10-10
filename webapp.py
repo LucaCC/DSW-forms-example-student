@@ -8,6 +8,11 @@ def render_main():
 
 @app.route("/response")
 def render_response():
+    favorite_color = request.args['color'] #get user's input for color input
+    if favorite_color == "blue":
+        response = "Yo! We're both basic af!"
+    else
+        response = "Well, we chose different favorite colors. Cool."
     return render_template('response.html')
     
     
